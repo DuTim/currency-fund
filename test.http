@@ -1,0 +1,58 @@
+@uri=http://127.0.0.1:5000/api/users
+@uriprofiles=http://127.0.0.1:5000/api/profiles
+### 
+GET {{uri}}/test HTTP/1.1
+
+
+
+### 
+POST {{uri}}/register
+Content-Type: application/x-www-form-urlencoded
+
+email=test5@163.com&password=123456&name=koma&identity=employee
+
+###
+POST {{uri}}/login
+Content-Type: application/x-www-form-urlencoded
+
+email=test1@test.com&password=123456
+###
+GET {{uri}}/current
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTJlMDU5MGU5ZjdiMjAyMGQ5NDZjNCIsIm5hbWUiOiJrb21hIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci8yYmY4MzEyYTQzM2E2N2FkYTY0OGVjZjQyZjMyMjNjYj9zPTIwMCZyPXBnJmQ9bW0iLCJpZGVudGl0eSI6ImVtcGxveWVlIiwiaWF0IjoxNTcwOTY2NzIwLCJleHAiOjE1NzA5NzAzMjB9.CUfdinw1mU5WIAvn9bhDm7jLpKbZjE-BwHJi8izVv2o
+
+
+
+###
+GET  {{uriprofiles}}/test
+
+
+### 
+POST  {{uriprofiles}}/add
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTQzZDY5MzhkZDU1NWZmODkyNTQ0NiIsIm5hbWUiOiJ0ZXN0MSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvMmJmODMxMmE0MzNhNjdhZGE2NDhlY2Y0MmYzMjIzY2I_cz0yMDAmcj1wZyZkPW1tIiwiaWRlbnRpdHkiOiJtYW5hZ2VyIiwiaWF0IjoxNTcxMTkxMzExLCJleHAiOjE1NzExOTQ5MTF9.XEmyOZCkRO-a6CsGtjandKazVYkgo2yWhQhX-CZu_-E
+
+type=课程3&describe=haode&income=300&expend=1000&cash=nihao&remark=中
+
+
+
+###
+GET  {{uriprofiles}}/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTJlMDU5MGU5ZjdiMjAyMGQ5NDZjNCIsIm5hbWUiOiJrb21hIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci8yYmY4MzEyYTQzM2E2N2FkYTY0OGVjZjQyZjMyMjNjYj9zPTIwMCZyPXBnJmQ9bW0iLCJpZGVudGl0eSI6ImVtcGxveWVlIiwiaWF0IjoxNTcwOTY2OTczLCJleHAiOjE1NzA5NzA1NzN9.CP2JhcEdmgamRnEBvw_G-mdkURJgqPvNjY_tcjipYrc
+
+
+###
+GET  {{uriprofiles}}/5da3122e07b86b31ec9dd738
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTJlMDU5MGU5ZjdiMjAyMGQ5NDZjNCIsIm5hbWUiOiJrb21hIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci8yYmY4MzEyYTQzM2E2N2FkYTY0OGVjZjQyZjMyMjNjYj9zPTIwMCZyPXBnJmQ9bW0iLCJpZGVudGl0eSI6ImVtcGxveWVlIiwiaWF0IjoxNTcwOTY2OTczLCJleHAiOjE1NzA5NzA1NzN9.CP2JhcEdmgamRnEBvw_G-mdkURJgqPvNjY_tcjipYrc
+
+
+### 
+POST  {{uriprofiles}}/edit/5da3122e07b86b31ec9dd738
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTJlMDU5MGU5ZjdiMjAyMGQ5NDZjNCIsIm5hbWUiOiJrb21hIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci8yYmY4MzEyYTQzM2E2N2FkYTY0OGVjZjQyZjMyMjNjYj9zPTIwMCZyPXBnJmQ9bW0iLCJpZGVudGl0eSI6ImVtcGxveWVlIiwiaWF0IjoxNTcwOTY2OTczLCJleHAiOjE1NzA5NzA1NzN9.CP2JhcEdmgamRnEBvw_G-mdkURJgqPvNjY_tcjipYrc
+
+type=课程3&describe=haode&income=300&expend=5000&cash=nihao&remark=差
+
+###
+DELETE   {{uriprofiles}}/delete/5da3179c76bcf52bdc386385
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTJlMDU5MGU5ZjdiMjAyMGQ5NDZjNCIsIm5hbWUiOiJrb21hIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci8yYmY4MzEyYTQzM2E2N2FkYTY0OGVjZjQyZjMyMjNjYj9zPTIwMCZyPXBnJmQ9bW0iLCJpZGVudGl0eSI6ImVtcGxveWVlIiwiaWF0IjoxNTcwOTY2OTczLCJleHAiOjE1NzA5NzA1NzN9.CP2JhcEdmgamRnEBvw_G-mdkURJgqPvNjY_tcjipYrc
