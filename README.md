@@ -6,3 +6,4 @@ nodejs +vue 的资金流水
 ###  cd client
 ### npm init
 
+# mongoDB
